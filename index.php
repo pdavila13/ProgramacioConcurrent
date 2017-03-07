@@ -1,9 +1,16 @@
 <?php
 
-function b() {
-  echo "b";
+function b($callback) {
+  echo "b\n";
+
+  // Permet excutar una funcio pel seu nom
+  call_user_func($callback);
 }
 
-b();
+function a() {
+  echo "a";
+}
+
+b('a');
 
 ?>
