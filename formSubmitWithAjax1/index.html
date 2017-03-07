@@ -24,15 +24,15 @@
         var xhr = new XMLHttpRequest();
         xhr.open("GET", "name.json");
 
-        xhr.onload = processResponse(xhr);
+        xhr.onload = processResponse;
 
         xhr.send(formData);
       }
 
-      function processResponse(xhr) {
-        if (xhr.readyState === xhr.DONE) {
-          if (xhr.status === 200) {
-            console.log(xhr.response);
+      function processResponse() {
+        if (this.readyState === this.DONE) {
+          if (this.status === 200) {
+            console.log(this.response);
           }
         }
       }
