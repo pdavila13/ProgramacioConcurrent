@@ -2,5 +2,5 @@ function foo() {
   console.error('foo')
 }
 
-setTimeout(foo,0)
+process.nextTick(foo)
 console.error('bar')
