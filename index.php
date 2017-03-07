@@ -1,16 +1,22 @@
 <?php
 
-function b($callback) {
-  echo "b\n";
+function myecho($callback) {
+  if (is_callable($callback)) {
+    // Permet excutar una funcio pel seu nom
+    call_user_func($callback);
+  } else {
+    echo $callback;
+  }
 
-  // Permet excutar una funcio pel seu nom
-  call_user_func($callback);
 }
 
 function a() {
-  echo "a";
+  echo "a\n";
 }
 
-b('a');
+myecho('a');
+
+$x = 5;
+myecho($x)
 
 ?>
