@@ -2,5 +2,5 @@ function foo() {
   console.error('foo')
 }
 
-foo()
+setTimeout(foo,0)
 console.error('bar')
