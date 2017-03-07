@@ -10,11 +10,11 @@ function myecho($callback) {
 
 }
 
-function a() {
+function other() {
   echo "a\n";
 }
 
-myecho('a');
+myecho('other');
 
 $x = 5;
 myecho($x)
