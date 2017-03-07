@@ -1,18 +1,10 @@
 // return b
-function b() {
-  console.log('b');
+function b(cb) {
+  console.log('b')
+  cb()
 }
 
-b()
-
-// return ¿? --> b
+// return ¿? --> a
 b(function() {
-  console.log('a');
+  console.log('a')
 })
-
-// return c
-function c(x) {
-  console.log('c');
-}
-
-c()
